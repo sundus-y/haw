@@ -2,3 +2,23 @@ $mysql_host = "mysql1.000webhost.com";
 $mysql_database = "a9237023_hawala";
 $mysql_user = "a9237023_root";
 $mysql_password = "HBugi!123";
+
+---mysql
+
+MySQL 5.1 database added.  Please make note of these credentials:
+
+       Root User: adminrdTYCLp
+   Root Password: qU65MCpSclmG
+   Database Name: php
+
+Connection URL: mysql://$OPENSHIFT_MYSQL_DB_HOST:$OPENSHIFT_MYSQL_DB_PORT/
+
+You can manage your new MySQL database by also embedding phpmyadmin.
+The phpmyadmin username and password will be the same as the MySQL credentials above.
+
+---phpmyadmin
+
+Please make note of these MySQL credentials again:
+  Root User: adminrdTYCLp
+  Root Password: qU65MCpSclmG
+URL: https://php-coderunner.rhcloud.com/phpmyadmin/
