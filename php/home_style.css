@@ -1,0 +1,64 @@
+#container{
+text-align: center;
+}
+
+#containt{
+text-align: center;
+border:1px solid gray;
+margin-left: auto;
+margin-right: auto;
+padding:2px 14px;
+width:80%;
+background-color:#e5eecc;
+}
+
+#left_containt{
+text-align: left;
+float: left;
+padding:2px 14px;
+width:25%;
+background-color:#e1fedd;
+}
+
+a, a:visited, a:hover, a:active {
+  color: inherit;
+}
+
+#current_page{
+color:#517141;
+}
+
+#unread{
+background-color:#517141;
+}
+
+#right_containt{
+text-align: left;
+border-left: 1px solid gray;
+float: right;
+padding:2px 5px;
+width:70%;
+background-color:#e5eecc;
+}
+
+#table_title{
+color:#517141;
+}
+
+#table_header{
+font-weight:bold;
+}
+
+#new_form{
+padding:5px 5px;
+}
+
+#bottom_containt{
+text-align: right;
+clear: both;
+border-top: 1px solid gray;
+}
+
+#error{
+color: red;
+}

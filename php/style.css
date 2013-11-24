@@ -1,0 +1,17 @@
+#container{
+text-align: center;
+}
+
+#containt{
+text-align: center;
+border:1px solid gray;
+margin-left: auto;
+margin-right: auto;
+padding:2px 14px;
+width:20%;
+background-color:#e5eecc;
+}
+
+#error{
+color: red;
+}

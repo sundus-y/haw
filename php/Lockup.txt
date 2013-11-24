@@ -1,0 +1,24 @@
+Error Code
+
+101 - Connection Problem
+201 - Authentication Failed
+301 - Insert Error
+302 - Update Failed.
+401 - No result found.
+
+
+User Type
+
+1 - Sender
+2 - Reciver
+11 - Admin
+
+
+Transaction Status
+
+1 - Active / Not Seen
+2 - Active / Seen
+3 - Active / Contacted
+4 - Finished / Cash
+5 - Finished / Bank
+6 - ACtive / Error

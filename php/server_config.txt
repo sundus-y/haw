@@ -1,0 +1,4 @@
+$mysql_host = "mysql1.000webhost.com";
+$mysql_database = "a9237023_hawala";
+$mysql_user = "a9237023_root";
+$mysql_password = "HBugi!123";

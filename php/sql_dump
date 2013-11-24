@@ -1,0 +1,123 @@
+-- phpMyAdmin SQL Dump
+-- version 2.11.4
+-- http://www.phpmyadmin.net
+--
+-- Host: localhost
+-- Generation Time: Nov 23, 2013 at 08:02 PM
+-- Server version: 5.1.57
+-- PHP Version: 5.2.17
+
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+
+--
+-- Database: `a9237023_hawala`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `report`
+--
+
+CREATE TABLE `report` (
+  `ID` int(11) NOT NULL,
+  `START_DATE` date NOT NULL,
+  `END_DATE` date NOT NULL,
+  `TOTAL_NUMBER_OF_TRANSACTIONS` decimal(10,2) NOT NULL,
+  `TOTAL_VALUE_OF_TRANSACTIONS` decimal(10,2) NOT NULL,
+  `TOTAL_VALUE_OF_EXCHANGE` decimal(10,2) NOT NULL,
+  `REMARK` text NOT NULL,
+  PRIMARY KEY (`ID`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `report`
+--
+
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `transactions`
+--
+
+CREATE TABLE `transactions` (
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
+  `USER_ID` int(11) NOT NULL,
+  `SENDER` varchar(50) NOT NULL,
+  `SENDER_NUMBER` varchar(20) NOT NULL,
+  `RECEIVER` varchar(50) NOT NULL,
+  `RECEIVER_NUMBER` varchar(20) NOT NULL,
+  `LOCATION` varchar(50) NOT NULL,
+  `AMOUNT` decimal(10,2) NOT NULL,
+  `RATE` decimal(10,2) NOT NULL,
+  `DATE` date NOT NULL,
+  `REMARK` text NOT NULL,
+  `STATUS` int(11) NOT NULL DEFAULT '1',
+  `LAST_UPDATE` date NOT NULL,
+  `LAST_UPDATE_BY` int(11) NOT NULL,
+  `SEEN` tinyint(1) NOT NULL,
+  PRIMARY KEY (`ID`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=43 ;
+
+--
+-- Dumping data for table `transactions`
+--
+
+INSERT INTO `transactions` VALUES(34, 3, 'Mustefa Mohammed', '', 'Senam Ahmed', '0911206359', 'Addis Ababa', 200.00, 13.50, '2013-07-17', 'sender(2013/07/17): Urgent\nreciver(2013/07/17): Waiting for customer to come.\nreciver(2013/07/17): Customer requested transfer to bank account\nreciver(2013/07/17): Made the transfer to Acc: 13141234 (Dashin Bank Addis Ababa) #: 12343523', 5, '2013-07-17', 4, 1);
+INSERT INTO `transactions` VALUES(35, 3, 'James Bond', '', 'Stuart Little', '0911232323', 'Addis Ababa', 200.00, 19.86, '2013-07-23', 'sender(2013/07/23): Urgent\nreciver(2013/07/23): In Progress\nsender(2013/07/24): Update\nreciver(2013/07/24): Good.\nsender(2013/07/30): Any change\nreceiver(2013/07/30): Waitting\nreceiver(2013/09/03): \nsender(2013/09/03): 0911202020\nreceiver(2013/09/03): \nsender(2013/09/21): \nsender(2013/09/21): \nsender(2013/09/21): \nsender(2013/09/21): \nsender(2013/09/21): File\nsender(2013/09/21): \nsender(2013/09/21): \nsender(2013/09/21): \nsender(2013/09/21): \nsender(2013/09/21): \nsender(2013/09/21): \nsender(2013/09/21): File\nsender(2013/09/21): \nsender(2013/09/21): \nsender(2013/09/21): \nsender(2013/09/21): File\nsender(2013/09/22): File\nsender(2013/09/22): DOC\nsender(2013/09/22): PDF\nsender(2013/09/22): JPG\nreceiver(2013/09/22): Waitting\nreceiver(2013/09/22): \nreceiver(2013/09/22): \nreceiver(2013/09/22): \nreceiver(2013/09/22): \nsender(2013/09/22): XLS\nreceiver(2013/09/22): xLd\nreceiver(2013/09/22): CLS\nreceiver(2013/09/22): Finished. Attached Bank Deposit Slip', 5, '2013-09-22', 4, 1);
+INSERT INTO `transactions` VALUES(36, 3, 'Alem Girma', '', 'Abebe Taye', '0911121212', 'Gonder', 350.00, 4.21, '2013-07-23', 'sender(2013/07/23): -\nreciver(2013/07/23): \nsender(2013/07/23): Update Please\nreciver(2013/07/23): Waiting for them to send me the acc number\nsender(2013/07/24): Ok\nreciver(2013/07/24): Ok\nsender(2013/07/28): Update\nreceiver(2013/07/30): \nreceiver(2013/07/30): Done', 4, '2013-07-30', 4, 1);
+INSERT INTO `transactions` VALUES(37, 3, 'Test Test', '', 'Test Reciver', '0911111111', 'Addis Ababa', 750.00, 4.73, '2013-07-24', 'sender(2013/07/24): -\nsender(2013/07/28): Update ??\nreciver(2013/07/28): \nreciver(2013/07/28): Waiting for them to come.\nsender(2013/07/28): Please do it fast.\nreciver(2013/07/28): Done\nsender(2013/07/30): Good', 4, '2013-07-30', 3, 1);
+INSERT INTO `transactions` VALUES(39, 3, 'Jack Thomas', '', 'Alen Brown', '09113212312', 'Addis Ababa', 310.00, 4.97, '2013-07-30', 'sender(2013/07/30): Urgent\nreceiver(2013/07/30): \nsender(2013/08/01): Update\nsender(2013/08/01): Update Please\nreceiver(2013/08/01): \nreceiver(2013/08/25): Number not working\nsender(2013/08/25): New Number: 0911252525\nreceiver(2013/08/25): Waiting for them to collect it.\nsender(2013/08/25): Good\nreceiver(2013/08/25): Done', 4, '2013-08-25', 4, 1);
+INSERT INTO `transactions` VALUES(40, 3, 'test', 'Test', 'Test', '200', 'Addis', 200.00, 200.00, '2013-09-21', 'sender(2013/09/21): Good\nsender(2013/09/21): File Upload\nsender(2013/09/21): \nsender(2013/09/21): \nsender(2013/09/21): \nsender(2013/09/21): \nreceiver(2013/09/22): Waiting for repaly\nreceiver(2013/09/22): Receipt for Bank deposit', 5, '2013-09-22', 4, 1);
+INSERT INTO `transactions` VALUES(41, 3, 'Testing', '123', 'Testin', '123', 'Add', 123.00, 12.32, '2013-09-22', 'sender(2013/09/22): Testing with file attachment\nsender(2013/09/22): ID\nreceiver(2013/09/22): Receiver ID\nreceiver(2013/09/22): ID\nreceiver(2013/09/22): ID\nreceiver(2013/09/22): Good. Done', 4, '2013-09-22', 4, 0);
+INSERT INTO `transactions` VALUES(42, 3, 'Testin', '123', 'Testing', '1235', 'ASDF', 123.00, 32.22, '2013-09-22', 'sender(2013/09/22): URGENT Bank Deliver.\r\nAcc# 123132123\r\nWegagen Bank\nreceiver(2013/09/22): Waiting on account number confirmation from customer.\nreceiver(2013/09/24): \nreceiver(2013/09/24): ', 3, '2013-09-24', 4, 0);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `uploads`
+--
+
+CREATE TABLE `uploads` (
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
+  `TRANSACTION_ID` int(11) NOT NULL,
+  `FILE_NAME` varchar(50) NOT NULL,
+  PRIMARY KEY (`ID`),
+  KEY `ID` (`ID`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
+
+--
+-- Dumping data for table `uploads`
+--
+
+INSERT INTO `uploads` VALUES(1, 41, 'Chrysanthemum.jpg');
+INSERT INTO `uploads` VALUES(2, 41, 'Jellyfish.jpg');
+INSERT INTO `uploads` VALUES(3, 42, 'Desert.jpg');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `users`
+--
+
+CREATE TABLE `users` (
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
+  `USERNAME` varchar(30) NOT NULL,
+  `PASSWORD` varchar(30) NOT NULL,
+  `TYPE` int(11) NOT NULL,
+  `STATUS` int(11) NOT NULL DEFAULT '1',
+  PRIMARY KEY (`ID`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=14 ;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` VALUES(3, 'sender', '123', 1, 1);
+INSERT INTO `users` VALUES(4, 'receiver', '123', 2, 1);
+INSERT INTO `users` VALUES(5, 'admin', 'admin123', 11, 1);
+INSERT INTO `users` VALUES(11, '123', '123', 11, 1);
+INSERT INTO `users` VALUES(12, 'bedelu', '2121', 1, 1);
+INSERT INTO `users` VALUES(13, 'bedelu', '1212', 2, 1);
+
