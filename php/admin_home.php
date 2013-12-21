@@ -1,7 +1,7 @@
 <html>
     <head>
         <title>Hawala.com - Admin</title>
-        <link rel="stylesheet" type"text/css" href="home_style.css"/> 
+        <link rel="stylesheet" type="text/css" href="home_style.css"/> 
     </head>
     <body>
         <?php

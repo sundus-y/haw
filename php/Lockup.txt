@@ -21,4 +21,4 @@ Transaction Status
 3 - Active / Contacted
 4 - Finished / Cash
 5 - Finished / Bank
-6 - ACtive / Error
+6 - Active / Error

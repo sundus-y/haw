@@ -1,7 +1,7 @@
 <html>
     <head>
         <title>DtoE.com - New Transaction</title>
-        <link rel="stylesheet" type"text/css" href="home_style.css"/>
+        <link rel="stylesheet" type="text/css" href="home_style.css"/>
         <script type="text/javascript">
 
             function validate()
@@ -116,8 +116,9 @@
             <div id="containt">
                 <div id="left_containt">
                     <h3> <a href="sender_home.php"> Home </a></h3>
-                    <h3> <a href="new_transaction.php" id="current_page"> Creat New Transaction </a></h3>
+                    <h3> <a href="new_transaction.php" id="current_page"> Create New Transaction </a></h3>
                     <h3> <a href="sender_search_transaction.php"> Search for Transaction </a></h3>
+                    <h3> <a href="sender_generate_report.php"> Generate Report </a></h3>
                 </div>
                 <div id="right_containt">
                     <?php
@@ -127,7 +128,7 @@
                         exit();
                     }
                     ?>
-                    <h2>Create New Transactions</h2>
+                    <h2>Create New Transactions<hr></h2>
                     <div align="left" id="error"> 
                         <?php
                         if (isset($_GET['error_code']))

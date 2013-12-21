@@ -1,7 +1,7 @@
 <html>
     <head>
         <title>DtoE.com - Home</title>
-        <link rel="stylesheet" type"text/css" href="home_style.css"/> 
+        <link rel="stylesheet" type="text/css" href="home_style.css"/> 
     </head>
     <body>
         <?php
@@ -19,9 +19,9 @@
             <div id="containt">
                 <div id="left_containt">
                     <h3> <a href="sender_home.php" id="current_page"> Home </a></h3>
-                    <h3> <a href="new_transaction.php"> Creat New Transaction </a></h3>
+                    <h3> <a href="new_transaction.php"> Create New Transaction </a></h3>
                     <h3> <a href="sender_search_transaction.php"> Search for Transaction </a></h3>
-                    <h3> <a href="generate_report.php"> Generate Report </a></h3>
+                    <h3> <a href="sender_generate_report.php"> Generate Report </a></h3>
                 </div>
                 <div id="right_containt">
                     <?php

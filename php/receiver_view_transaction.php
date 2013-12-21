@@ -1,7 +1,7 @@
 <html>
     <head>
         <title>DtoE.com - View Transaction</title>
-        <link rel="stylesheet" type"text/css" href="home_style.css"/> 
+        <link rel="stylesheet" type="text/css" href="home_style.css"/> 
         <script type="text/javascript">
             window.onload = function (){
                 var remark = document.getElementById('remark');

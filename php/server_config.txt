@@ -1,3 +1,11 @@
+---local
+host: localhost
+root user: root
+root password: mysql123
+db: dtoe
+
+
+
 $mysql_host = "mysql1.000webhost.com";
 $mysql_database = "a9237023_hawala";
 $mysql_user = "a9237023_root";
@@ -7,7 +15,7 @@ $mysql_password = "HBugi!123";
 
 MySQL 5.1 database added.  Please make note of these credentials:
 
-       Root User: adminrdTYCLp
+   Root User: adminrdTYCLp
    Root Password: qU65MCpSclmG
    Database Name: php
 
