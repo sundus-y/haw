@@ -1,4 +1,4 @@
-<html>
+<!DOCTYPE html> <html>
     <head>
         <title>DtoE.com - New Transaction</title>
         <link rel="stylesheet" type="text/css" href="home_style.css"/>
@@ -122,7 +122,6 @@
                 </div>
                 <div id="right_containt">
                     <?php
-                    //$con = new mysqli("mysql1.000webhost.com","a9237023_root","HBugi!123","a9237023_hawala");
                     if ($con->connect_errno) {
                         echo "<h2> Sorry there was error connecting to the Database. </h2>";
                         exit();
@@ -161,7 +160,18 @@
                                     Phone Number:
                                     <input type="text" name="r_number"><br>
                                     Location:
-                                    <input type="text" name="location"><br>
+                                    <input list="location" type="text" name="location" placeholder="e.g: Addis Ababa, Hawassa, . . ." style="width:42%"><br>
+                                    <datalist id="location">
+                                        <?php
+                                            $query = "SELECT * FROM LOCATION";
+                                            $result = $con->query($query);
+                                            if (!($result->num_rows == 0)) {
+                                                while ($row = $result->fetch_assoc()) {
+                                                    echo "<option value='{$row["NAME"]}'>{$row['NAME']}";
+                                                }
+                                            }
+                                        ?>
+                                    </datalist>
                                     Amount in Birr:
                                     <input disabled="true" name="exchange">
                                     <input type="button" value="Update" onclick="calc();" >

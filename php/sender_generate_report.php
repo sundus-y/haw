@@ -1,4 +1,4 @@
-<html>
+<!DOCTYPE html> <html>
     <head>
         <title>DtoE.com - View Transaction</title>
         <link rel="stylesheet" type="text/css" href="home_style.css"/> 

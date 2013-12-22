@@ -1,4 +1,4 @@
-<html>
+<!DOCTYPE html> <html>
     <head>
         <title>Hawala.com - Admin</title>
         <link rel="stylesheet" type="text/css" href="home_style.css"/> 

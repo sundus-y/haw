@@ -1,4 +1,4 @@
-<html>
+<!DOCTYPE html> <html>
     <head>
         <title>DtoE.com - View Transaction</title>
         <link rel="stylesheet" type="text/css" href="home_style.css"/> 
@@ -44,6 +44,7 @@
                     <h3> <a href="sender_home.php" id="current_page"> Home </a></h3>
                     <h3> <a href="new_transaction.php"> Create New Transaction </a></h3>
                     <h3> <a href="sender_search_transaction.php"> Search for Transaction </a></h3>
+                    <h3> <a href="sender_generate_report.php"> Generate Report </a></h3>
                 </div>
                 <div id="right_containt">
                     <?php

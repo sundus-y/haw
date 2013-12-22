@@ -1,4 +1,4 @@
-<html>
+<!DOCTYPE html> <html>
 	<head>
 		<title>DtoE.com</title>
 		<link rel="stylesheet" type="text/css" href="style.css"/> 
