@@ -170,6 +170,9 @@
                                                     echo "<option value='{$row["NAME"]}'>{$row['NAME']}";
                                                 }
                                             }
+                                            else {
+                                              echo "No Data";
+                                            }
                                         ?>
                                     </datalist>
                                     Amount in Birr:
