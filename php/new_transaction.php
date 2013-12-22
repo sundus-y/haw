@@ -163,15 +163,12 @@
                                     <input list="location" type="text" name="location" placeholder="e.g: Addis Ababa, Hawassa, . . ." style="width:42%"><br>
                                     <datalist id="location">
                                         <?php
-                                            $query = "SELECT * FROM LOCATION";
+                                            $query = "SELECT * FROM location";
                                             $result = $con->query($query);
                                             if (!($result->num_rows == 0)) {
                                                 while ($row = $result->fetch_assoc()) {
                                                     echo "<option value='{$row["NAME"]}'>{$row['NAME']}";
                                                 }
-                                            }
-                                            else {
-                                              echo "No Data";
                                             }
                                         ?>
                                     </datalist>
