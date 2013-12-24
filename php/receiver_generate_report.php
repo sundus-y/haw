@@ -29,7 +29,7 @@
                 <div id="left_containt">
                     <h3> <a href="receiver_home.php"> Home </a></h3>
                     <h3> <a href="receiver_search_transaction.php"> Search for Transaction </a></h3>
-                    <h3> <a href="receiver_generate_report.php" id="current_page"> Generate Report </a></h3>
+                    <h3> <a href="receiver_generate_report.php" class="current_page"> Generate Report </a></h3>
                 </div>
                 <div id="right_containt">
                     <h2>Generate Report<hr></h2>

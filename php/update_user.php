@@ -29,7 +29,7 @@ if ($con->connect_errno) {
 
     /*     * * if update/delete fails ** */
     if ($con->affected_rows == 0) {
-        header("Location: admin.php?error_code=302");
+        header("Location: admin_home.php?error_code=302");
         exit();
     }
     /*     * * if update/delete is ok ** */ else {

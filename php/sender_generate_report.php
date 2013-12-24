@@ -20,7 +20,7 @@
                     <h3> <a href="sender_home.php"> Home </a></h3>
                     <h3> <a href="new_transaction.php"> Create New Transaction </a> </h3>
                     <h3> <a href="sender_search_transaction.php"> Search for Transaction </a></h3>
-                    <h3> <a href="sender_generate_report.php" id="current_page"> Generate Report </a></h3>
+                    <h3> <a href="sender_generate_report.php" class="current_page"> Generate Report </a></h3>
                 </div>
                 <div id="right_containt">
                     <h2>Generate Report<hr></h2>

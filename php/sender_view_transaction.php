@@ -41,7 +41,7 @@
             </div>
             <div id="containt">
                 <div id="left_containt">
-                    <h3> <a href="sender_home.php" id="current_page"> Home </a></h3>
+                    <h3> <a href="sender_home.php" class="current_page"> Home </a></h3>
                     <h3> <a href="new_transaction.php"> Create New Transaction </a></h3>
                     <h3> <a href="sender_search_transaction.php"> Search for Transaction </a></h3>
                     <h3> <a href="sender_generate_report.php"> Generate Report </a></h3>

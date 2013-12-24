@@ -2,9 +2,10 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/1"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/1">
-        <file>file:/Users/syousuf/Sites/dtoe/generate_excel.php</file>
-        <file>file:/Users/syousuf/Sites/dtoe/generate_report.php</file>
-        <file>file:/Users/syousuf/Sites/dtoe/sender_search_transaction.php</file>
-        <file>file:/Users/syousuf/Sites/dtoe/receiver_search_transaction.php</file>
+        <file>file:/Users/syousuf/Sites/dtoe/create_trans.php</file>
+        <file>file:/Users/syousuf/Sites/dtoe/new_transaction.php</file>
+        <file>file:/Users/syousuf/Sites/dtoe/sender_home.php</file>
+        <file>file:/Users/syousuf/Sites/dtoe/admin_home.php</file>
+        <file>file:/Users/syousuf/Sites/dtoe/config_defaults.php</file>
     </open-files>
 </project-private>

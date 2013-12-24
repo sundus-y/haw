@@ -98,6 +98,7 @@
                 }
                 document.new_form.exchange.value = rate_num * amount_num;
             }
+            
         </script>		
     </head>
     <body>
@@ -116,7 +117,7 @@
             <div id="containt">
                 <div id="left_containt">
                     <h3> <a href="sender_home.php"> Home </a></h3>
-                    <h3> <a href="new_transaction.php" id="current_page"> Create New Transaction </a></h3>
+                    <h3> <a href="new_transaction.php" class="current_page"> Create New Transaction </a></h3>
                     <h3> <a href="sender_search_transaction.php"> Search for Transaction </a></h3>
                     <h3> <a href="sender_generate_report.php"> Generate Report </a></h3>
                 </div>
@@ -135,6 +136,21 @@
                                 echo "Sorry there was error connecting to the Database.";
                             elseif ($_GET['error_code'] == 301)
                                 echo "Sorry there was error writing to the Database. Please try again";
+                        if ($con->connect_errno) {
+                            echo "<h2> Sorry there was error connecting to the Database. </h2>";
+                            exit();
+                        }
+                        else{
+                            $query = "SELECT * FROM defaults";
+                            $result = $con->query($query); 
+                            if ($result->num_rows == 0) {
+                                $defaults['rate'] = "0.0";
+                            } else {
+                                while ($row = $result->fetch_assoc()) {
+                                    $defaults[$row['NAME']] = $row['VALUE'];
+                                }
+                            }
+                        }
                         ?>
                     </div>
                     <form action="create_trans.php" method="POST" name="new_form" onsubmit="return(validate())">
@@ -152,7 +168,7 @@
                                     Amount:
                                     <input type="text" name="amount"><br>
                                     Rate:
-                                    <input type="text" name="rate">
+                                    <?php echo "<input type='text' name='rate' value='${defaults['rate']}'>" ?>
                                 </td>
                                 <td>
                                     Full Name:
@@ -160,16 +176,22 @@
                                     Phone Number:
                                     <input type="text" name="r_number"><br>
                                     Location:
-                                    <input list="location" type="text" name="location" placeholder="e.g: Addis Ababa, Hawassa, . . ." style="width:42%"><br>
+                                    <input list="location" type="text" name="location" placeholder="e.g: Addis Ababa, Mojo, . . ." style="width:42%"><br>
                                     <datalist id="location">
                                         <?php
-                                            $query = "SELECT * FROM location";
+                                        if ($con->connect_errno) {
+                                            echo "<h2> Sorry there was error connecting to the Database. </h2>";
+                                            exit();
+                                        }
+                                        else {
+                                            $query = "SELECT * FROM locations";
                                             $result = $con->query($query);
                                             if (!($result->num_rows == 0)) {
                                                 while ($row = $result->fetch_assoc()) {
                                                     echo "<option value='{$row["NAME"]}'>{$row['NAME']}";
                                                 }
                                             }
+                                        }
                                         ?>
                                     </datalist>
                                     Amount in Birr:
@@ -178,9 +200,9 @@
                                 </td>
                             </tr>
                             <tr> 
-                                <td colspan="2"> 
-                                    <b> Remark </b> <br>
-                                    <textarea cols='88' rows='8' name="remark"></textarea>
+                                <td colspan="2">
+                                    <b> Remark (</b><input type="checkbox" name="urgent" id="urgent" onclick="update_remark()"> Urgent)  <br>
+                                    <textarea cols='88' rows='8' id="remark" name="remark"></textarea>
                                     <br>
                                     <input type="submit" value="Create Transaction">
                                 </td>
@@ -194,4 +216,15 @@
                 </div>
             </div>
     </body>
+    <script type="text/javascript">
+        function update_remark(){
+            if(document.getElementById('urgent').checked){
+                var urgent = '<?php echo $defaults['urgent'] ?>';
+                document.getElementById('remark').value = urgent;
+            }
+            else{
+                document.getElementById('remark').value = "";
+            }
+        }
+    </script>
 </html>

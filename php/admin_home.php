@@ -17,7 +17,7 @@
             </div>
             <div id="containt">
                 <div id="left_containt">
-                    <h3> <a href="admin_home.php" id="current_page"> Account Administration </a></h3>
+                    <h3> <a href="admin_home.php" class="current_page"> Account Administration </a></h3>
                     <h3> <a href="config_default.php"> Configure Defaults </a></h3>
                 </div>
                 <div id="right_containt">
@@ -92,7 +92,7 @@ if ($result->num_rows == 0) {
     echo "<tr> <td colspan='9' style='text-align:center'> <h3> No Users Registered </h3> </td> </tr>";
 } else {
     while ($row = $result->fetch_assoc()) {
-        echo "<tr> <form action = 'update_user.php' method = 'POST'>";
+        echo "<tr> <form action = 'update_user.php' method = 'POST' onsubmit='return confirm(\"Are you sure you want to delete this User?\")'>";
         echo "<td>";
         echo "<input type='hidden' name='user_id' value='" . $row['ID'] . "'>";
         echo $row['ID'];
@@ -132,7 +132,7 @@ if ($result->num_rows == 0) {
         echo "</select>";
         echo "</td>";
         echo "<td> <input type = 'submit' name='update' value = 'Update'> </td>";
-        echo "<td> <input type = 'submit' name='delete' value = 'Delete'> </td>";
+        echo "<td> <input class= 'delete' type = 'submit' name='delete' value = 'Delete'> </td>";
         echo "</form> </tr>";
     }
 }

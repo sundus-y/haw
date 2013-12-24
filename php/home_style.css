@@ -24,7 +24,7 @@ a, a:visited, a:hover, a:active {
   color: inherit;
 }
 
-#current_page{
+a.current_page{
 color:#517141;
 }
 
@@ -61,4 +61,12 @@ border-top: 1px solid gray;
 
 #error{
 color: red;
+}
+
+.delete{
+    color: red;
+}
+
+.extra_wide{
+    width: 20px;
 }

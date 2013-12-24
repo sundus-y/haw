@@ -18,7 +18,7 @@
             </div>
             <div id="containt">
                 <div id="left_containt">
-                    <h3> <a href="sender_home.php" id="current_page"> Home </a></h3>
+                    <h3> <a href="sender_home.php" class="current_page"> Home </a></h3>
                     <h3> <a href="new_transaction.php"> Create New Transaction </a></h3>
                     <h3> <a href="sender_search_transaction.php"> Search for Transaction </a></h3>
                     <h3> <a href="sender_generate_report.php"> Generate Report </a></h3>
@@ -81,6 +81,10 @@ if ($result->num_rows == 0) {
             echo "<input type = 'submit' value = 'Active / Contacted'>";
         else if ($row['STATUS'] == 6)
             echo "<input type = 'submit' value = 'Active / Error'>";
+        echo "</form>";
+        echo "<form action = 'delete_transaction.php' method = 'POST' onsubmit='return confirm(\"Are you sure you want to delete this Transaction?\")'>";
+            echo "<input type='hidden' name='trans_id' value='" . $row['ID'] . "'>";
+            echo "<input class = 'delete' type = 'submit' value = 'Delete'>";
         echo "</form>";
         echo "</td>";
         echo "</tr>";

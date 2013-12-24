@@ -6,11 +6,14 @@ Error Code
 302 - Update Failed.
 401 - No result found.
 
+311 - Insert Successful
+312 - Update Successful 
+
 
 User Type
 
 1 - Sender
-2 - Reciver
+2 - Receiver
 11 - Admin
 
 
